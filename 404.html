@@ -1,4 +1,18 @@
 <html>
     <title>404 Not Found</title>
-    <body><h1>404 Not Found</h1><hr /><br /><center>nginx</center>
+    <body><center>
+        <h1>404 Not Found</h1>
+        此处没有任何东西，请跳转首页
+        3秒后自动回到首页
+        <script>
+            function dealy(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+            async function jumpto(){
+                await dealy(3000);
+                window.location.href = "./index.html";
+            }
+            jumpto()
+        </script>
+    </center></body>
 <html>
